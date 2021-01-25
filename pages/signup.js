@@ -1,11 +1,11 @@
 import AppLayout from "../components/AppLayout";
 
-function Home() {
+function Signup() {
   return (
     <AppLayout>
-      <div>Hello, next</div>
+      <div>Sign up</div>
     </AppLayout>
   )
 }
 
-export default Home
+export default Signup

@@ -1,11 +1,11 @@
 import AppLayout from "../components/AppLayout";
 
-function Home() {
+function Profile() {
   return (
     <AppLayout>
-      <div>Hello, next</div>
+      <div>Profile</div>
     </AppLayout>
   )
 }
 
-export default Home
+export default Profile
