@@ -7,7 +7,7 @@ const ButtonWrapper = styled.div`
   margin-top: 10px;
 `
 
-export default function LoginForm() {
+export default function LoginForm({setIsLoggedIn}) {
   const [id, setId] = useState('')
   const [password, setPassword] = useState('')
   const handleChangeId = useCallback(e => {
@@ -18,8 +18,12 @@ export default function LoginForm() {
     setPassword(e.target.value)
   }, [])
 
+  const handleSubmitForm = useCallback(() => {
+    console.log(id, password)
+    setIsLoggedIn(true)
+  }, [id, password])
   return (
-    <Form>
+    <Form onFinish={handleSubmitForm}>
       <div>
         <label htmlFor="user-id">아이디</label>
         <br />
