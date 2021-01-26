@@ -35,7 +35,7 @@ function AppLayout({children}) {
           {children}
         </Col>
         <Col xs={24} md={6}>
-          <a href="#">Made by cslee</a>
+          <a href="#" target="_blank" rel="noreferrer noopener">Made by cslee</a>
         </Col>
       </Row>
     </div>
