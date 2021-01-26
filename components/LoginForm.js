@@ -2,6 +2,7 @@ import {useState, useCallback} from 'react'
 import Link from 'next/link'
 import {Form, Input, Button} from "antd"
 import styled from 'styled-components'
+import useInput from '../hooks/useInput'
 
 const ButtonWrapper = styled.div`
   margin-top: 10px;
@@ -10,15 +11,8 @@ const FormWrapper = styled(Form)`
   padding: 10px
 `
 export default function LoginForm({setIsLoggedIn}) {
-  const [id, setId] = useState('')
-  const [password, setPassword] = useState('')
-  const handleChangeId = useCallback(e => {
-    setId(e.target.value)
-  }, [])
-
-  const handleChangePassword = useCallback(e => {
-    setPassword(e.target.value)
-  }, [])
+  const [id, handleChangeId] = useInput('')
+  const [password, handleChangePassword] = useInput('')
 
   const handleSubmitForm = useCallback(() => {
     console.log(id, password)
@@ -46,7 +40,7 @@ export default function LoginForm({setIsLoggedIn}) {
         <Button
           type="primary"
           htmlType="submit"
-          loding={false}
+          loading={false}
         >
           로그인
         </Button>

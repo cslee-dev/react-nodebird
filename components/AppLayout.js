@@ -5,7 +5,7 @@ import UserProfile from "./UserProfile"
 import LoginForm from './LoginForm'
 import styled from "styled-components"
 
-const SearchInput = styled(Input.Search)`
+const LayoutSearchInput = styled(Input.Search)`
   vertical-align: middle;
 `
 
@@ -21,7 +21,7 @@ function AppLayout({children}) {
           <Link href="/profile"><a>프로필</a></Link>
         </Menu.Item>
         <Menu.Item>
-          <SearchInput enterButton />
+          <LayoutSearchInput enterButton />
         </Menu.Item>
         <Menu.Item>
           <Link href="/signup"><a>회원가입</a></Link>
