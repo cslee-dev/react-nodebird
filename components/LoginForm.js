@@ -1,6 +1,11 @@
 import {useState, useCallback} from 'react'
 import Link from 'next/link'
-import {Form, Input, Button} from "antd";
+import {Form, Input, Button} from "antd"
+import styled from 'styled-components'
+
+const ButtonWrapper = styled.div`
+  margin-top: 10px;
+`
 
 export default function LoginForm() {
   const [id, setId] = useState('')
@@ -31,7 +36,7 @@ export default function LoginForm() {
           required
         />
       </div>
-      <div>
+      <ButtonWrapper>
         <Button
           type="primary"
           htmlType="submit"
@@ -46,7 +51,7 @@ export default function LoginForm() {
             </Button>
           </a>
         </Link>
-      </div>
+      </ButtonWrapper>
     </Form>
   )
 }
