@@ -1,7 +1,7 @@
 import AppLayout from "../components/AppLayout";
 import Head from "next/head";
 
-function Profile() {
+export default function Profile() {
   return (
     <AppLayout>
       <Head>
@@ -11,5 +11,3 @@ function Profile() {
     </AppLayout>
   )
 }
-
-export default Profile

@@ -1,7 +1,7 @@
 import AppLayout from "../components/AppLayout";
-import {Head} from "next/document";
+import Head from "next/head";
 
-function Signup() {
+export default function Signup() {
   return (
     <AppLayout>
       <Head>
@@ -11,5 +11,3 @@ function Signup() {
     </AppLayout>
   )
 }
-
-export default Signup
